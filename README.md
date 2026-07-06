@@ -8,12 +8,7 @@
 
 ## 🚀 Quick Start
 
-**No Docker? No problem!** Get started in 30 seconds:
 
-```bash
-pip install -r requirements.txt
-python run_standalone.py input/book.pdf
-```
 
 ## ✨ Features
 
