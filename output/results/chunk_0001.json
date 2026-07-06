@@ -1,0 +1,24 @@
+{
+  "chunk_id": 1,
+  "source_file": "input/book.pdf",
+  "start_page": 3,
+  "end_page": 4,
+  "page_count": 2,
+  "word_count": 1337,
+  "char_count": 9498,
+  "processed_at": 1783328819.7206838,
+  "pages": [
+    {
+      "page_number": 3,
+      "char_count": 4772,
+      "word_count": 676,
+      "text": "BitcoinPriceAnalysisandFutureForecast:AStudyBasedonMarketFactorsandQuantitativeModels\napproach has been further refined by using more discrepancies in the data used for analysis, affecting\nadvanced NL..."
+    },
+    {
+      "page_number": 4,
+      "char_count": 4725,
+      "word_count": 661,
+      "text": "ICDSE2025-TheInternationalConferenceonDataScienceandEngineering\nregulatory landscape for cryptocurrencies is highly focus on developing better model validation and\nfragmented, with different countries..."
+    }
+  ]
+}

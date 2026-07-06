@@ -1,0 +1,24 @@
+{
+  "chunk_id": 0,
+  "source_file": "input/book.pdf",
+  "start_page": 1,
+  "end_page": 2,
+  "page_count": 2,
+  "word_count": 1137,
+  "char_count": 8833,
+  "processed_at": 1783328818.2308586,
+  "pages": [
+    {
+      "page_number": 1,
+      "char_count": 4196,
+      "word_count": 493,
+      "text": "Bitcoin Price Analysis and Future Forecast: A Study Based on\nMarket Factors and Quantitative Models\nYisu Xu a\nBeijing Institute of Technology School of Humanities and Social Sciences, Beijing Institut..."
+    },
+    {
+      "page_number": 2,
+      "char_count": 4636,
+      "word_count": 644,
+      "text": "ICDSE2025-TheInternationalConferenceonDataScienceandEngineering\nsensitivity to exogenous shocks—such as Elon to forecast future points in a series based on historical\nMusk’s 2021 tweets impacting pric..."
+    }
+  ]
+}

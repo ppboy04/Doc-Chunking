@@ -1,0 +1,48 @@
+{
+  "source_file": "input/test_large.pdf",
+  "total_pages": 100,
+  "chunk_size": 20,
+  "num_chunks": 5,
+  "chunks": [
+    {
+      "chunk_id": 0,
+      "path": "output\\chunks\\chunk_0000.pdf",
+      "start_page": 1,
+      "end_page": 20,
+      "page_count": 20,
+      "source_file": "input/test_large.pdf"
+    },
+    {
+      "chunk_id": 1,
+      "path": "output\\chunks\\chunk_0001.pdf",
+      "start_page": 21,
+      "end_page": 40,
+      "page_count": 20,
+      "source_file": "input/test_large.pdf"
+    },
+    {
+      "chunk_id": 2,
+      "path": "output\\chunks\\chunk_0002.pdf",
+      "start_page": 41,
+      "end_page": 60,
+      "page_count": 20,
+      "source_file": "input/test_large.pdf"
+    },
+    {
+      "chunk_id": 3,
+      "path": "output\\chunks\\chunk_0003.pdf",
+      "start_page": 61,
+      "end_page": 80,
+      "page_count": 20,
+      "source_file": "input/test_large.pdf"
+    },
+    {
+      "chunk_id": 4,
+      "path": "output\\chunks\\chunk_0004.pdf",
+      "start_page": 81,
+      "end_page": 100,
+      "page_count": 20,
+      "source_file": "input/test_large.pdf"
+    }
+  ]
+}
