@@ -16,7 +16,8 @@ RUN mkdir -p /data/input /data/output
 ENV PYTHONUNBUFFERED=1 \
     INPUT_DIR=/data/input \
     OUTPUT_DIR=/data/output \
-    REDIS_URL=redis://redis:6379/0
+    REDIS_URL=redis://redis:6379/0 \
+    DATABASE_URL=postgresql+psycopg2://postgres:postgres@postgres:5432/bookdb
 
 # Default command is overridden per-service in docker-compose.yml
 CMD ["python", "-m", "app.main", "/data/input/book.pdf"]

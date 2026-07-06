@@ -15,7 +15,7 @@ import pdfplumber
 from pypdf import PdfReader, PdfWriter
 
 OUTPUT_DIR = "output"
-CHUNK_SIZE = 20
+CHUNK_SIZE = 2
 
 
 def split_pdf_into_chunks(pdf_path: str, chunk_size: int = CHUNK_SIZE):
@@ -76,7 +76,7 @@ def process_chunk(chunk_meta: dict):
                 "page_number": page_number,
                 "char_count": len(text),
                 "word_count": len(text.split()),
-                "text": text[:200] + "..." if len(text) > 200 else text,  # truncate for brevity
+                "text": text,
             })
             full_text_parts.append(text)
 
@@ -85,6 +85,7 @@ def process_chunk(chunk_meta: dict):
 
     result = {
         "chunk_id": chunk_id,
+        "chunk_path": chunk_path,
         "source_file": chunk_meta.get("source_file"),
         "start_page": chunk_meta["start_page"],
         "end_page": chunk_meta["end_page"],

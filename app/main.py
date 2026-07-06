@@ -19,9 +19,13 @@ from celery import chord
 from app.chunker import split_pdf_into_chunks
 from app.tasks import process_chunk, merge_results
 from app.config import OUTPUT_DIR
+from app.db import init_db
 
 
 def run(pdf_path: str, poll_interval: float = 1.0):
+    print("[0/3] Ensuring Postgres/pgvector schema exists...")
+    init_db()
+
     print(f"[1/3] Splitting {pdf_path} into chunks...")
     manifest = split_pdf_into_chunks(pdf_path)
     print(f"      -> {manifest['num_chunks']} chunks "

@@ -7,6 +7,8 @@ import pdfplumber
 
 from app.celery_app import celery_app
 from app.config import OUTPUT_DIR
+from app.db import SessionLocal, save_page
+from app.embeddings import embed
 
 
 @celery_app.task(bind=True, name="app.tasks.process_chunk", max_retries=2, default_retry_delay=5)
@@ -25,24 +27,48 @@ def process_chunk(self, chunk_meta: dict):
     try:
         pages_out = []
         full_text_parts = []
+        source_file = chunk_meta.get("source_file")
 
-        with pdfplumber.open(chunk_path) as pdf:
-            for i, page in enumerate(pdf.pages):
-                text = page.extract_text() or ""
-                page_number = chunk_meta["start_page"] + i
-                pages_out.append({
-                    "page_number": page_number,
-                    "char_count": len(text),
-                    "word_count": len(text.split()),
-                    "text": text,
-                })
-                full_text_parts.append(text)
+        db_session = SessionLocal()
+        try:
+            with pdfplumber.open(chunk_path) as pdf:
+                for i, page in enumerate(pdf.pages):
+                    page_text = page.extract_text() or ""
+                    page_number = chunk_meta["start_page"] + i
+                    page_word_count = len(page_text.split())
+
+                    pages_out.append({
+                        "page_number": page_number,
+                        "char_count": len(page_text),
+                        "word_count": page_word_count,
+                        "text": page_text,
+                    })
+                    full_text_parts.append(page_text)
+
+                    # embed + stage for Postgres/pgvector insert
+                    vector = embed(page_text)
+                    save_page(
+                        db_session,
+                        source_file=source_file,
+                        chunk_id=chunk_id,
+                        page_number=page_number,
+                        text_content=page_text,
+                        word_count=page_word_count,
+                        embedding=vector,
+                    )
+            db_session.commit()
+        except Exception:
+            db_session.rollback()
+            raise
+        finally:
+            db_session.close()
 
         full_text = "\n".join(full_text_parts)
         word_count = len(full_text.split())
 
         result = {
             "chunk_id": chunk_id,
+            "chunk_path": chunk_path,
             "source_file": chunk_meta.get("source_file"),
             "start_page": chunk_meta["start_page"],
             "end_page": chunk_meta["end_page"],

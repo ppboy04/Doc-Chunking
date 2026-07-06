@@ -39,6 +39,7 @@ def split_pdf_into_chunks(pdf_path: str, chunk_size: int = CHUNK_SIZE, out_dir: 
         chunks.append({
             "chunk_id": chunk_id,
             "path": chunk_path,
+            "source_file": pdf_path,
             "start_page": start + 1,   # human-readable, 1-indexed
             "end_page": end,           # inclusive
             "page_count": end - start,
