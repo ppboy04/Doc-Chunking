@@ -1,0 +1,80 @@
+{
+  "source_file": "input/book.pdf",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "chunk_id": 0,
+      "source_file": "input/book.pdf",
+      "start_page": 1,
+      "end_page": 2,
+      "page_count": 2,
+      "word_count": 1137,
+      "char_count": 8833,
+      "processed_at": 1783328818.2308586,
+      "pages": [
+        {
+          "page_number": 1,
+          "char_count": 4196,
+          "word_count": 493,
+          "text": "Bitcoin Price Analysis and Future Forecast: A Study Based on\nMarket Factors and Quantitative Models\nYisu Xu a\nBeijing Institute of Technology School of Humanities and Social Sciences, Beijing Institut..."
+        },
+        {
+          "page_number": 2,
+          "char_count": 4636,
+          "word_count": 644,
+          "text": "ICDSE2025-TheInternationalConferenceonDataScienceandEngineering\nsensitivity to exogenous shocks—such as Elon to forecast future points in a series based on historical\nMusk’s 2021 tweets impacting pric..."
+        }
+      ]
+    },
+    {
+      "chunk_id": 1,
+      "source_file": "input/book.pdf",
+      "start_page": 3,
+      "end_page": 4,
+      "page_count": 2,
+      "word_count": 1337,
+      "char_count": 9498,
+      "processed_at": 1783328819.7206838,
+      "pages": [
+        {
+          "page_number": 3,
+          "char_count": 4772,
+          "word_count": 676,
+          "text": "BitcoinPriceAnalysisandFutureForecast:AStudyBasedonMarketFactorsandQuantitativeModels\napproach has been further refined by using more discrepancies in the data used for analysis, affecting\nadvanced NL..."
+        },
+        {
+          "page_number": 4,
+          "char_count": 4725,
+          "word_count": 661,
+          "text": "ICDSE2025-TheInternationalConferenceonDataScienceandEngineering\nregulatory landscape for cryptocurrencies is highly focus on developing better model validation and\nfragmented, with different countries..."
+        }
+      ]
+    },
+    {
+      "chunk_id": 2,
+      "source_file": "input/book.pdf",
+      "start_page": 5,
+      "end_page": 6,
+      "page_count": 2,
+      "word_count": 809,
+      "char_count": 6019,
+      "processed_at": 1783328820.7789993,
+      "pages": [
+        {
+          "page_number": 5,
+          "char_count": 4469,
+          "word_count": 600,
+          "text": "BitcoinPriceAnalysisandFutureForecast:AStudyBasedonMarketFactorsandQuantitativeModels\ncan further enhance the predictive power of the 6 CONCLUSIONS\nmodels.\nFuture research should focus on developing m..."
+        },
+        {
+          "page_number": 6,
+          "char_count": 1549,
+          "word_count": 209,
+          "text": "ICDSE2025-TheInternationalConferenceonDataScienceandEngineering\nReuters. (2021). China’s crypto ban triggers market sell-off.\nReuters. Retrieved from https://www.reuters.com\nDyhrberg, A. H. (2016). Bi..."
+        }
+      ]
+    }
+  ],
+  "total_pages": 6,
+  "total_word_count": 3283
+}

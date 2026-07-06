@@ -1,0 +1,24 @@
+{
+  "chunk_id": 2,
+  "source_file": "input/book.pdf",
+  "start_page": 5,
+  "end_page": 6,
+  "page_count": 2,
+  "word_count": 809,
+  "char_count": 6019,
+  "processed_at": 1783328820.7789993,
+  "pages": [
+    {
+      "page_number": 5,
+      "char_count": 4469,
+      "word_count": 600,
+      "text": "BitcoinPriceAnalysisandFutureForecast:AStudyBasedonMarketFactorsandQuantitativeModels\ncan further enhance the predictive power of the 6 CONCLUSIONS\nmodels.\nFuture research should focus on developing m..."
+    },
+    {
+      "page_number": 6,
+      "char_count": 1549,
+      "word_count": 209,
+      "text": "ICDSE2025-TheInternationalConferenceonDataScienceandEngineering\nReuters. (2021). China’s crypto ban triggers market sell-off.\nReuters. Retrieved from https://www.reuters.com\nDyhrberg, A. H. (2016). Bi..."
+    }
+  ]
+}
